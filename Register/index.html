@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Alvany Figueredo</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf/notyf.min.js"></script>
+</head>
+
+<body>
+    <section class="container">
+        <div class="login-form">
+            <h1>Cadastre-se</h1>
+            <div class="form">
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cpf">CPF</label>
+                        <input type="text" name="cpf" id="cpf" placeholder="CPF" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="oab">OAB</label>
+                        <input type="text" name="oab" id="oab" placeholder="OAB" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Senha" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" name="confirm-password" id="confirm-password"
+                        placeholder="Confirmar Senha" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="area">Área de Atuação</label>
+                        <input type="text" name="area" id="area" placeholder="Área de Atuação" required>
+                    </div>
+                </div>
+
+                <button id="submit-button" class="login-button">Cadastrar</button>
+                <p>Já tem uma conta?<a href="../Login/index.html"> Entrar</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+<script src="./script.js"></script>
