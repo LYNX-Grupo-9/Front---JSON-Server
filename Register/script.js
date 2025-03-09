@@ -55,6 +55,15 @@ function validatePasswords(password, confirmPassword) {
     return password === confirmPassword;
 }
 
+function validateOab(oab) {
+    const re = /^[A-Za-z]{2}\d{4,6}\d{1}$/;
+    return re.test(oab);
+}
+
+function validateArea(area) {
+    return area !== '';
+}
+
 async function register() {
     const name = inputName.value;
     const email = inputEmail.value;
@@ -69,6 +78,11 @@ async function register() {
         return;
     }
 
+    if (!validateOab(oab)) {
+        notyf.error("OAB inválido");
+        return;
+    }
+
     if (!validateEmail(email)) {
         notyf.error("Email inválido");
         return;
@@ -76,6 +90,11 @@ async function register() {
 
     if (!validatePasswords(password, confirmPassword)) {
         notyf.error("As senhas não coincidem");
+        return;
+    }
+
+    if (!validateArea(area)) {
+        notyf.error("Coloque uma área de atuação");
         return;
     }
 
