@@ -46,6 +46,10 @@ function validateCpf(cpf) {
     return true;
 }
 
+function validateName(name) {
+    return name !== '';
+}
+
 function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
@@ -72,6 +76,11 @@ async function register() {
     const password = inputPassword.value;
     const confirmPassword = inputConfirmPassword.value;
     const area = inputArea.value;
+
+    if (!validateName(name)) {
+        notyf.error("Nome inválido");
+        return;
+    }
 
     if (!validateCpf(cpf)) {
         notyf.error("Cpf inválido");
