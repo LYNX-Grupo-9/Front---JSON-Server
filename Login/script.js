@@ -46,7 +46,7 @@ async function login(email, password) {
         
         console.log(data)
         notyf.success("Login Realizado com sucesso!");
-
+        window.location.href = '../PaginaEmConstrução/index.html';
     } catch (error ) {
         console.log(error);
     }
